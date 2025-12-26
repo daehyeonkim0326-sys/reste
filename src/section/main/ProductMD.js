@@ -1,12 +1,18 @@
 import mdImg from "../../assets/img/Midnight_05.png";
 import "./ProductMD.scss";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { useEffect, useRef, useState } from "react";
 import products from "../../assets/data/products.json";
 const ProductMD = ({onAdd}) => {
   const sectionRef = useRef(null);
+=======
+import products from "../../assets/data/products.json"
+import { useRef, useState, useEffect } from "react";
+const ProductMD = ({onAdd}) => {
+const sectionRef = useRef(null);
+>>>>>>> e9b626a69079b5490b80fcc94cabc26a70cfbf7a
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -16,18 +22,19 @@ const ProductMD = ({onAdd}) => {
       },
       { threshold: 0.4 }
     );
-
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
+<<<<<<< HEAD
 
+=======
+>>>>>>> e9b626a69079b5490b80fcc94cabc26a70cfbf7a
   const handleClick =()=>{
     onAdd(products);
   }
   return (
     <section className={`product-md ${isVisible ? "is-visible" : ""}`}
-      ref={sectionRef}
-    >
+      ref={sectionRef}>
       <div className="product-description">
         <div className="product-detail">
           <img src={mdImg} alt="미드나잇 소파" />
@@ -46,5 +53,4 @@ const ProductMD = ({onAdd}) => {
     </section>
   );
 };
-
 export default ProductMD;
