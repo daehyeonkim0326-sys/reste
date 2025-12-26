@@ -2,8 +2,8 @@ import mdImg from "../../assets/img/Midnight_05.png";
 import "./ProductMD.scss";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-
-const ProductMD = ({item,onAdd}) => {
+import products from "../../assets/data/products.json";
+const ProductMD = ({onAdd}) => {
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -21,9 +21,8 @@ const ProductMD = ({item,onAdd}) => {
     return () => observer.disconnect();
   }, []);
 
-const ProductMD = ({onAdd}) => {
   const handleClick =()=>{
-    onAdd();
+    onAdd(products);
   }
   return (
     <section className={`product-md ${isVisible ? "is-visible" : ""}`}
@@ -39,7 +38,7 @@ const ProductMD = ({onAdd}) => {
             </p>
             <h4>￦ 1,390,000</h4>
             <Link to={`/detail/midnight`}>
-              <button>구매하기</button>
+              <button onClick={handleClick}>구매하기</button>
             </Link>
           </div>
         </div>
