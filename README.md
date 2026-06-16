@@ -53,5 +53,4 @@ react로 CartPage.js,CartPopup.js 컴포넌트를 만들고 scss를 활용하여
 해결:MainPage.js에서 객체로 const item 으로 Products.json에서 id 찾아서 ProductMD로 Props 전달
 과정: const item = products.find((p) => String(p.id) === "midnight");(MainPage.js) -> Props로 ProductMD.js에 item 전달 -> handleClick 안에 onAdd한테 item 전달 -> button을 감싸고 있는 Link에 handleClick 전달 
 
-## 8. 실행 화면
-(구현한 화면 스크린샷 1장 첨부)
+
