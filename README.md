@@ -32,7 +32,7 @@ src
 * Figma를 활용한 전체 와이어프레임 정립과 UI설계
 
 [개발:  기능]
-*useState,useEffect,useNavigete,motion 등을 사용하여
+*useState,useEffect,useNavigate,motion 등을 사용하여
 react로 CartPage.js,CartPopup.js 컴포넌트를 만들고 scss를 활용하여 CartPage와 CartPopup style 제작  
 
 
